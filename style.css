@@ -1,0 +1,182 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #ffffff;
+    --background-color: #f5f5f5;
+    --input-bg: #ffffff;
+    --input-border: #ccc;
+    --button-bg: var(--primary-color);
+    --button-hover-bg: #45a049;
+    --button-text: var(--secondary-color);
+    --header-color: #333;
+    --section-bg: #ffffff;
+    --footer-bg: #333;
+    --footer-text: #ffffff;
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --container-max-width: 700px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    width: 100%;
+    max-width: var(--container-max-width);
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--header-color);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.location {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.about-event {
+    margin-bottom: 30px;
+}
+
+.about-event h2,
+.registration h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.about-event p,
+.registration p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.about-event ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.registration form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+    background-color: var(--input-bg);
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ccc" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+button {
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-event h2,
+    .registration h2 {
+        font-size: 1.3rem;
+    }
+
+    input, select, button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .event-date,
+    .location,
+    .about-event p,
+    .about-event ul,
+    .registration p {
+        font-size: 0.9rem;
+    }
+
+    .about-event h2,
+    .registration h2 {
+        font-size: 1.1rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
